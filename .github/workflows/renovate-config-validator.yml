@@ -33,4 +33,4 @@ jobs:
         run: npm install --global renovate
 
       - name: Validate Renovate config
-        run: renovate-config-validator --strict default.json
+        run: renovate-config-validator --strict --no-global default.json
