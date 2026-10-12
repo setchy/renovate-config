@@ -1,9 +1,9 @@
-# setchy/renovate-config
+# 🧩 setchy/renovate-config
 
 Shared [Renovate](https://docs.renovatebot.com/) presets for repositories in the
 [@setchy](https://github.com/setchy) organization.
 
-## Usage
+## 📦 Usage
 
 Extend the default preset from your repository's `renovate.json`:
 
