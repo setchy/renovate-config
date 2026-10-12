@@ -20,6 +20,13 @@
       "description": "Remove word `dependency` from commit messages and PR titles",
       "matchDatasources": ["npm"],
       "commitMessageTopic": "{{depName}}"
+    },
+    {
+      "description": "Auto-merge digest updates for setchy/renovate-config workflows",
+      "matchManagers": ["github-actions"],
+      "matchPackageNames": ["setchy/renovate-config"],
+      "matchUpdateTypes": ["digest"],
+      "automerge": true
     }
   ]
 }
