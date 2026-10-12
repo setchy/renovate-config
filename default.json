@@ -10,7 +10,6 @@
     "customManagers:biomeVersions"
   ],
   "labels": ["dependency"],
-  "assignees": ["setchy"],
   "rangeStrategy": "pin",
   "packageRules": [
     {
