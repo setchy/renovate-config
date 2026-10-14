@@ -1,6 +1,6 @@
 <div align="center">
 
-# 🧩 Setchy Renovate config
+# 🧩 Setchy Renovate Config
 
 **Shared [Renovate][renovate] presets & validation workflow** for the [setchy organization][setchy-org].
 
