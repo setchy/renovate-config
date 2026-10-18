@@ -12,6 +12,7 @@
   "labels": ["dependency"],
   "rangeStrategy": "pin",
   "platformAutomerge": false,
+  "reviewersFromCodeOwners": true,
   "packageRules": [
     {
       "matchDepTypes": ["engines"],
