@@ -77,5 +77,7 @@ jobs:
           printf '  %s\n' ${ABS}
           cd "$(mktemp -d)"
           # shellcheck disable=SC2086 -- intentional word-splitting of the file list
-          # renovate is pinned (and kept current by a regex customManager in renovate.json)
-          npx --yes --ignore-scripts --package renovate@44.171.1 -- renovate-config-validator --strict ${ABS}
+          # Track the current Renovate major only: upstream releases several times
+          # a day, and every bump here would ripple a digest PR into every consumer
+          # that pins this workflow by SHA.
+          npx --yes --ignore-scripts --package renovate@^44 -- renovate-config-validator --strict ${ABS}
