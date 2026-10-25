@@ -61,7 +61,7 @@ jobs:
 Validate changes before opening a pull request:
 
 ```sh
-npx --yes --package "renovate@^44" -- renovate-config-validator --strict default.json
+npx --yes --package=renovate -- renovate-config-validator --strict default.json
 ```
 
 Continuous integration runs the same validation on every pull request.
