@@ -3,10 +3,18 @@
   "extends": [
     "local>setchy/renovate-config"
   ],
+  "packageRules": [
+    {
+      "description": "Renovate ships several releases per day, and every bump moves main (and with it a digest PR in each consumer pinning this workflow). List the bump on the Dependency Dashboard and only open a PR once it is approved there.",
+      "matchDepNames": ["renovate"],
+      "matchDatasources": ["npm"],
+      "dependencyDashboardApproval": true
+    }
+  ],
   "customManagers": [
     {
       "customType": "regex",
-      "description": "Keep the Renovate version pinned in the config validator workflow up to date",
+      "description": "Track the Renovate version pinned in the config validator workflow and surface updates on the Dependency Dashboard",
       "managerFilePatterns": [
         "/\\.github/workflows/renovate-config-validator\\.yml$/"
       ],
