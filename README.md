@@ -48,6 +48,7 @@ jobs:
 - 🧬 Biome `$schema` version updates.
 - 🏷️ The `dependency` label on every update.
 - 📌 npm dependency ranges pinned by default, with `engines` left as ranges.
+- 🟢 Node.js runtime (`engines`, `devEngines`, `.nvmrc`, `.node-version`, Docker images) and `@types/node` updates are grouped into one PR.
 - ✋ No platform automerge.
 
 ## Presets
