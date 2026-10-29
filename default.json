@@ -52,7 +52,7 @@
       "matchManagers": ["github-actions"],
       "matchPackageNames": ["setchy/renovate-config"],
       "matchUpdateTypes": ["digest"],
-      "automerge": true
+      "automerge": true,
       "platformAutomerge": false
     }
   ]
