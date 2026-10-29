@@ -42,8 +42,10 @@ jobs:
 ```
 
 This trusted validator tracks `@main`, trusting changes merged to this
-repository. For zizmor, add this exact-path `ref-pin` policy to
-`.github/zizmor.yml`:
+repository. Change existing SHA references to `@main`; the preset prevents
+Renovate from pinning them again. Other actions remain SHA-pinned.
+
+For zizmor, add this exact-path exception to `.github/zizmor.yml`:
 
 ```yaml
 rules:
@@ -51,11 +53,8 @@ rules:
     config:
       policies:
         "*": hash-pin
-        setchy/renovate-config/.github/workflows/renovate-config-validator.yml: ref-pin
+        "setchy/renovate-config/.github/workflows/renovate-config-validator.yml": ref-pin
 ```
-
-The shared preset disables digest pinning only for this workflow; keep other
-actions SHA-pinned.
 
 ## 🛠️ Policy
 
