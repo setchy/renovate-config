@@ -50,6 +50,7 @@ rules:
   unpinned-uses:
     config:
       policies:
+        "*": hash-pin
         setchy/renovate-config/.github/workflows/renovate-config-validator.yml: ref-pin
 ```
 
