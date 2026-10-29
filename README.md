@@ -41,16 +41,9 @@ jobs:
     uses: setchy/renovate-config/.github/workflows/renovate-config-validator.yml@main
 ```
 
-This trusted reusable validator intentionally follows `@main`, so consumers
-automatically trust and run future changes merged into this repository's `main`
-branch instead of reviewing each workflow digest update. The shared preset
-disables Renovate digest pinning only for the exact `setchy/renovate-config`
-package managed by `github-actions`. Consumers must inherit the updated preset
-and change any existing SHA-pinned validator call to `@main`; the rule does not
-rewrite existing pins or override later repository-level rules.
-
-If a consumer runs zizmor, merge this exact workflow-path `ref-pin` policy into
-its `.github/zizmor.yml`, preserving its other rules and policies:
+This trusted validator tracks `@main`, trusting changes merged to this
+repository. For zizmor, add this exact-path `ref-pin` policy to
+`.github/zizmor.yml`:
 
 ```yaml
 rules:
@@ -60,10 +53,8 @@ rules:
         setchy/renovate-config/.github/workflows/renovate-config-validator.yml: ref-pin
 ```
 
-The bare repository name does not match the reusable workflow's subpath. Do not
-use a repository wildcard or suppress the audit for the workflow as a whole.
-Keep third-party actions and other reusable workflows SHA-pinned. No blanket
-`setchy/**` or other owner-wide exception is introduced.
+The shared preset disables digest pinning only for this workflow; keep other
+actions SHA-pinned.
 
 ## 🛠️ Policy
 
