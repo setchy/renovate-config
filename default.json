@@ -48,12 +48,10 @@
       "commitMessageTopic": "Node.js"
     },
     {
-      "description": "Auto-merge digest updates for setchy/renovate-config workflows",
+      "description": "Keep the trusted reusable Renovate validator on its selected ref without digest pinning",
       "matchManagers": ["github-actions"],
       "matchPackageNames": ["setchy/renovate-config"],
-      "matchUpdateTypes": ["digest"],
-      "automerge": true
-      "platformAutomerge": false
+      "pinDigests": false
     }
   ]
 }
