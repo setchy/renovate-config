@@ -49,13 +49,19 @@ package managed by `github-actions`. Consumers must inherit the updated preset
 and change any existing SHA-pinned validator call to `@main`; the rule does not
 rewrite existing pins or override later repository-level rules.
 
-If a consumer runs zizmor, suppress `unpinned-uses` only on this validator call
-(a narrow ref-pin exception), not for the workflow, owner, or organization:
+If a consumer runs zizmor, merge this exact workflow-path `ref-pin` policy into
+its `.github/zizmor.yml`, preserving its other rules and policies:
 
 ```yaml
-    uses: setchy/renovate-config/.github/workflows/renovate-config-validator.yml@main # zizmor: ignore[unpinned-uses]
+rules:
+  unpinned-uses:
+    config:
+      policies:
+        setchy/renovate-config/.github/workflows/renovate-config-validator.yml: ref-pin
 ```
 
+The bare repository name does not match the reusable workflow's subpath. Do not
+use a repository wildcard or suppress the audit for the workflow as a whole.
 Keep third-party actions and other reusable workflows SHA-pinned. No blanket
 `setchy/**` or other owner-wide exception is introduced.
 
