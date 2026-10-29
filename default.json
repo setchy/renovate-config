@@ -7,19 +7,29 @@
     ":enableVulnerabilityAlerts",
     ":semanticCommitTypeAll(chore)",
     ":separateMultipleMajorReleases",
-    "customManagers:biomeVersions"
+    ":rebaseStalePrs",
+    "group:vitePlus",
+    "group:githubArtifactActions",
+    "customManagers:biomeVersions",
+    "helpers:pinGitHubActionDigestsToSemver"
   ],
+  "osvVulnerabilityAlerts": true,
   "labels": ["dependency"],
   "rangeStrategy": "pin",
-  "platformAutomerge": false,
   "reviewersFromCodeOwners": true,
   "packageRules": [
     {
+      "description": "Pin npm dependency ranges by default",
+      "matchManagers": ["npm"],
+      "rangeStrategy": "pin"
+    },
+    {
+      "description": "Keep engine ranges (for example node) as ranges rather than pinning them",
       "matchDepTypes": ["engines"],
       "rangeStrategy": "auto"
     },
     {
-      "description": "Remove word `dependency` from commit messages and PR titles",
+      "description": "Use the dependency name in npm commit messages and PR titles",
       "matchDatasources": ["npm"],
       "commitMessageTopic": "{{depName}}"
     },
@@ -43,6 +53,7 @@
       "matchPackageNames": ["setchy/renovate-config"],
       "matchUpdateTypes": ["digest"],
       "automerge": true
+      "platformAutomerge": false
     }
   ]
 }
