@@ -64,6 +64,7 @@ rules:
 - 🏷️ The `dependency` label on every update.
 - 📌 npm dependency ranges pinned by default, with `engines` left as ranges.
 - 🟢 Node.js runtime (`engines`, `devEngines`, `.nvmrc`, `.node-version`, Docker images) and `@types/node` updates are grouped into one PR.
+- ☕ Java runtime updates (`java`, `java-jdk`, `java-jre` from mise, asdf, and `actions/setup-java`) are grouped into one PR.
 - ✋ No platform automerge.
 
 ## Presets

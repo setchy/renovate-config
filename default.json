@@ -48,6 +48,12 @@
       "commitMessageTopic": "Node.js"
     },
     {
+      "description": "Group Java runtime updates across mise, asdf, and actions/setup-java. Replace with group:java once renovatebot/renovate#47573 is released",
+      "matchDatasources": ["java-version"],
+      "matchPackageNames": ["java", "java-jdk", "java-jre"],
+      "groupName": "Java"
+    },
+    {
       "description": "Keep the trusted reusable Renovate validator on its selected ref without digest pinning",
       "matchManagers": ["github-actions"],
       "matchPackageNames": ["setchy/renovate-config"],
