@@ -31,6 +31,11 @@
       "rangeStrategy": "auto"
     },
     {
+      "description": "Let mise resolve partial versions to the newest matching release and only propose new version lines",
+      "matchManagers": ["mise"],
+      "rangeStrategy": "replace"
+    },
+    {
       "description": "Use the dependency name in npm commit messages and PR titles",
       "matchDatasources": ["npm"],
       "commitMessageTopic": "{{depName}}"
