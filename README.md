@@ -63,6 +63,7 @@ rules:
 - 🧬 Biome `$schema` version updates.
 - 🏷️ The `dependency` label on every update.
 - 📌 npm dependency ranges pinned by default, with `engines` left as ranges.
+- 🧰 mise tool ranges left as version lines (`26`, `3.15`, `temurin-25`) so mise resolves the newest matching release; Renovate only proposes new lines.
 - 🟢 Node.js runtime (`engines`, `devEngines`, `.nvmrc`, `.node-version`, Docker images) and `@types/node` updates are grouped into one PR.
 - ☕ Java runtime updates (`java`, `java-jdk`, `java-jre` from mise, asdf, and `actions/setup-java`) are grouped into one PR.
 - ✋ No platform automerge.
