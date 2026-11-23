@@ -36,7 +36,7 @@ jobs:
       - name: Setup pnpm and Node.js
         uses: pnpm/setup@v3.2.0
         with:
-          version: 12.21.0
+          version: 12.22.0
           node-version-file: .nvmrc
           install: false
 
