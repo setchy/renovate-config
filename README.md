@@ -60,6 +60,7 @@ rules:
 
 - 🚦 Rate limiting disabled, with vulnerability alerts enabled.
 - 🔖 Semantic `chore` commits and separate major releases.
+- 🔀 Open update PRs are rebased only when they conflict, not on every base-branch change.
 - 🧬 Biome `$schema` version updates.
 - 🏷️ The `dependency` label on every update.
 - 📌 npm dependency ranges pinned by default, with `engines` left as ranges.
